@@ -25,8 +25,8 @@ As always, you will be submitting a technical report and a presentation. **You m
 Before you begin working on this project, please do the following:
 
 1. Sign up for an account on [Kaggle](https://www.kaggle.com/)
-2. **IMPORTANT**: Click this link ([Regression Challenge Sign Up](https://www.kaggle.com/t/be171ecfd2074925ba8ca9b5babaa3d1)) to **join** the competition (otherwise you will not be able to make submissions!)
-3. Review the material on the [DSIR-523 Regression Challenge](https://www.kaggle.com/competitions/dsir-523-project-2-regression-challenge/)
+2. **IMPORTANT**: Click this link ([Regression Challenge Sign Up](https://www.kaggle.com/t/2e03788f7c184663932ea7a62fa1c737)) to **join** the competition (otherwise you will not be able to make submissions!)
+3. Review the material on the [DSIR-919 Regression Challenge](https://www.kaggle.com/competitions/dsir-919-project-2/overview)
 4. Review the [data description](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).
 
 ## The Modeling Process
@@ -48,26 +48,26 @@ Before you begin working on this project, please do the following:
 
 ## Submission
 
-Materials must be submitted by the beginning of class on **Friday, June 17**.
+Materials must be submitted by the beginning of class on **Friday, October 14th**.
 
-The last day for the Kaggle competition will be **Friday, June 17**.
+The last day for the Kaggle competition will be **Friday, October 14th**.
 
 Your technical report will be hosted on Github Enterprise. Make sure it includes:
 
 - A README.md (that isn't this file)
 - Jupyter notebook(s) with your analysis and models (renamed to describe your project)
-- At least one successful prediction submission on [DSIR-523 Regression Challenge](https://www.kaggle.com/competitions/dsir-523-project-2-regression-challenge/) --  you should see your name in the "[Leaderboard](https://www.kaggle.com/competitions/dsir-523-project-2-regression-challenge/leaderboard)" tab.
+- At least one successful prediction submission on [DSIR-919 Regression Challenge](https://www.kaggle.com/competitions/dsir-919-project-2/) --  you should see your name in the "[Leaderboard](https://www.kaggle.com/competitions/dsir-919-project-2/leaderboard)" tab.
 - Data files
 - Presentation slides
 - Any other necessary files (images, etc.)
 
-**Check with your local instructor for how they would like you to submit your repo for review.**
+**Submit a link to your repo in Google Classroom.**
 
 ---
 
 ## Presentation Structure
 
-- **Must be within time limit established by local instructor.**
+- **Must be within time limit established by instructor.**
 - Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
 - Consider the audience. **Check with your local instructor for direction**.
 - Start with the **data science problem**.
