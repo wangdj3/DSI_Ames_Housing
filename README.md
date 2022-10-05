@@ -54,7 +54,7 @@ The last day for the Kaggle competition will be **Friday, October 14th**.
 
 Your technical report will be hosted on Github Enterprise. Make sure it includes:
 
-- A README.md (that isn't this file)
+- A README.md (that isn't this file). Take a look at this style guide [here](https://git.generalassemb.ly/dsi-919/style-guide)
 - Jupyter notebook(s) with your analysis and models (renamed to describe your project)
 - At least one successful prediction submission on [DSIR-919 Regression Challenge](https://www.kaggle.com/competitions/dsir-919-project-2/) --  you should see your name in the "[Leaderboard](https://www.kaggle.com/competitions/dsir-919-project-2/leaderboard)" tab.
 - Data files
