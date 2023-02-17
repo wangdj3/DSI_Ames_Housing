@@ -146,7 +146,7 @@ It stands to reason that for a person hoping to increase their home sale value, 
 
 - Cleaned datasets as well as the original source data files utilized can be found in the './datasets' directory 
 
-- Model-generated output filescan be found in the './output' directory.  The './output/predictions_8_ridge.csv' output file is considered the final model.
+- Model-generated output filescan be found in the './output' directory 
 
 
 ---

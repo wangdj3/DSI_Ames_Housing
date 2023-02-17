@@ -1,185 +1,157 @@
-# Project 2 - Ames Housing Data and Kaggle Challenge
+# Project 2: Ames Housing Data and Kaggle Challenge
 
-Welcome to Project 2! It's time to start modeling.
 
-**Primary Learning Objectives:**
-
-1. Creating and iteratively refining a regression model
-1. Using [Kaggle](https://www.kaggle.com/) to practice the modeling process
-1. Providing business insights through reporting and presentation.
-
-You are tasked with creating a regression model based on the Ames Housing Dataset. This model will predict the price of a house at sale.
-
-The Ames Housing Dataset is an exceptionally detailed and robust dataset with over 70 columns of different features relating to houses.
-
-Secondly, we are hosting a competition on Kaggle to give you the opportunity to practice the following skills:
-
-- Refining models over time
-- Use of train-test split, cross-validation, and data with unknown values for the target to simulate the modeling process
-- The use of Kaggle as a place to practice data science
-
-As always, you will be submitting a technical report and a presentation. **You may find that the best model for Kaggle is not the best model to address your data science problem.**
-
-## Set-up
-
-Before you begin working on this project, please do the following:
-
-1. Sign up for an account on [Kaggle](https://www.kaggle.com/)
-2. **IMPORTANT**: Click this link ([Regression Challenge Sign Up](https://www.kaggle.com/t/b2a3a87f44634d209272075aca507f6e)) to **join** the competition (otherwise you will not be able to make submissions!)
-3. Review the material on the [DSIR-123 Regression Challenge](https://www.kaggle.com/competitions/project-2-regression-challenge-123/overview)
-4. Review the [data description](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).
-
-## The Modeling Process
-
-1. The train dataset has all of the columns that you will need to generate and refine your models. The test dataset has all of those columns except for the target that you are trying to predict in your Regression model.
-2. Generate your regression model using the training data. We expect that within this process, you'll be making use of:
-    - train-test split
-    - cross-validation / grid searching for hyperparameters
-    - strong exploratory data analysis to question correlation and relationship across predictive variables
-    - code that reproducibly and consistently applies feature transformation (such as the preprocessing library)
-3. Predict the values for your target column in the test dataset and submit your predictions to Kaggle to see how your model does against unknown data.
-    - **Note**: Kaggle expects to see your submissions in a specific format. Check the challenge's page to make sure you are formatting your CSVs correctly!
-    - **You are limited to models you've learned in class**. In other words, you cannot use XGBoost, Neural Networks or any other advanced model for this project.
-4. Evaluate your models!
-    - consider your evaluation metrics
-    - consider your baseline score
-    - how can your model be used for inference?
-    - why do you believe your model will generalize to new data?
-
-## Submission
-
-Materials must be submitted by the beginning of class on **Friday, February 17th @ 10 AM EST**.
-
-The last day for the Kaggle competition will be **Thursday, February 16th @ 11:59 PM EST**.
-
-Your technical report will be hosted on Github Enterprise. Make sure it includes:
-
-- A README.md (that isn't this file). Take a look at this style guide [here](https://git.generalassemb.ly/dsi-123/style-guide)
-- Jupyter notebook(s) with your analysis and models (renamed to describe your project)
-- At least one successful prediction submission on [DSIR-123 Regression Challenge](https://www.kaggle.com/competitions/project-2-regression-challenge-123/overview) --  you should see your name in the "[Leaderboard](https://www.kaggle.com/competitions/project-2-regression-challenge-123/leaderboard)" tab.
-- Data files
-- Presentation slides
-- Any other necessary files (images, etc.)
-
-**Submit a link to your repo in Google Classroom.**
 
 ---
+## Problem Statement
 
-## Presentation Structure
-
-- **Presentation should be between 5-8 minutes.**
-- Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
-- Consider your audience. (This depends on your problem statement!)
-- Start with the **data science problem**.
-- Use visuals that are appropriately scaled and interpretable.
-- Talk about your procedure/methodology (high level).
-- Talk about your primary findings.
-- Make sure you provide **clear recommendations** that follow logically from your analyses and narrative and answer your data science problem.
-
-Be sure to rehearse and time your presentation before class.
+asdfasfasdfasdfasf
 
 ---
+## Data Background
 
-## Rubric
+Our study uses data from the Ames, Iowa Assessor’s Office \(via [Kaggle](https://www.kaggle.com/) \) "used in computing assessed values for individual residential properties sold in Ames, IA from 2006 to 2010", which contains housing prices and house/property characteristics.  These characteristics are studied and used to create a model that can be used to predict the prices of other homes in the area.
 
-Your local instructor will evaluate your project (for the most part) using the following criteria.  You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
 
-**Scores will be out of 27 points based on the 9 items in the rubric.** 
-*3 points per section*
+Reference: [data description & source for below Data Dictionary](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).
 
-| Score | Interpretation |
-| --- | --- |
-| **0** | *Project fails to meet the minimum requirements for this item.* |
-| **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
-| **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
-| **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
 
-### The Data Science Process
+---
+## Data Dictionary
 
-**Problem Statement**
-- Is it clear what the student plans to do?
-- What type of model will be developed?
-- How will success be evaluated?
-- Is the scope of the project appropriate?
-- Is it clear who cares about this or why this is important to investigate?
-- Does the student consider the audience and the primary and secondary stakeholders?
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|rtype|object|ACT, SAT, CGR|Record Type: C=County\| D=District\| S=School\| X=State|
+|sname|object|ACT, SAT, CGR|School Name\| N/A = County or District Level Record|
+|dname|object|ACT, SAT, CGR|District Name\| N/A = County Level Record|
+|cname|object|ACT, SAT, CGR|County Name|
 
-**Data Cleaning and EDA**
-- Are missing values imputed appropriately?
-- Are distributions examined and described?
-- Are outliers identified and addressed?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
-- Does the student address whether or not they are likely to be able to answer their problem statement with the provided data given what they've discovered during EDA?
+#### Originating from the ACT dataset
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|id|int|train.csv, test.csv|identifier used |
+|lot_frontage|int|train.csv, test.csv|Linear feet of street connected to property|
+|lot_area|int|train.csv, test.csv|Lot size in square feet|
+|utilities|int|train.csv, test.csv|(Ordinal): Type of utilities available<br>4	All public Utilities (E,G,W,& S)<br>3	Electricity, Gas, and Water (Septic Tank)<br>2	Electricity and Gas Only<br>1	Electricity only|
+|land_slope|int|train.csv, test.csv|(Ordinal): Slope of property|
+|overall_qual|int|train.csv, test.csv|(Ordinal): Rates the overall material and finish of the house|
+|overall_cond|int|train.csv, test.csv|(Ordinal): Rates the overall condition of the house|
+|||||
+|year_built|int|train.csv, test.csv|Original construction date|
+|year_remod/add|int|train.csv, test.csv|Remodel date (same as construction date if no remodeling or additions)|
+|exter_qual|int|train.csv, test.csv|(Ordinal): Evaluates the quality of the material on the exterior|
+|exter_cond|int|train.csv, test.csv|(Ordinal): Evaluates the present condition of the material on the exterior|
+|bsmt_qual|int|train.csv, test.csv|(Ordinal): Evaluates the height of the basement|
+|bsmt_cond|int|train.csv, test.csv|(Ordinal): Evaluates the general condition of the basement|
+|bsmt_exposure|int|train.csv, test.csv|(Ordinal): Refers to walkout or garden level walls|
+|bsmtfin_type_1|int|train.csv, test.csv|(Ordinal): Rating of basement finished area|
+|bsmtfin_sf_1|int|train.csv, test.csv|Type 1 finished square feet|
+|bsmtfin_type_2|int|train.csv, test.csv|(Ordinal): Rating of basement finished area (if multiple types)|
+|bsmtfin_sf_2|int|train.csv, test.csv|Type 2 finished square feet|
+|bsmt_unf_sf|int|train.csv, test.csv|Unfinished square feet of basement area|
+|total_bsmt_sf|int|train.csv, test.csv|Total square feet of basement area|
+|heating_qc|int|train.csv, test.csv|(Ordinal): Heating quality and condition|
+|electrical|int|train.csv, test.csv|(Ordinal): Electrical system|
+|1st_flr_sf|int|train.csv, test.csv|First Floor square feet|
+|2nd_flr_sf|int|train.csv, test.csv|Second floor square feet|
+|low_qual_fin_sf|int|train.csv, test.csv|Low quality finished square feet (all floors)|
+|gr_liv_area|int|train.csv, test.csv|Above grade (ground) living area square feet|
+|bsmt_full_bath|int|train.csv, test.csv|Basement full bathrooms|
+|bsmt_half_bath|int|train.csv, test.csv|Basement half bathrooms|
+|full_bath|int|train.csv, test.csv|Full bathrooms above grade|
+|half_bath|int|train.csv, test.csv|Half baths above grade|
+|bedroom_abvgr|int|train.csv, test.csv|Bedrooms above grade (does NOT include basement bedrooms)|
+|kitchen_abvgr|int|train.csv, test.csv|Kitchens above grade|
+|kitchen_qual|int|train.csv, test.csv|(Ordinal): Kitchen quality|
+|totrms_abvgrd|int|train.csv, test.csv|Total rooms above grade (does not include bathrooms)|
+|functional|int|train.csv, test.csv|(Ordinal): Home functionality (Assume typical unless deductions are warranted)|
+|fireplaces|int|train.csv, test.csv|Number of fireplaces|
+|fireplace_qu|int|train.csv, test.csv|(Ordinal): Fireplace quality|
+|garage_yr_blt|float|train.csv, test.csv|Year garage was built|
+|garage_cars|int|train.csv, test.csv|Size of garage in car capacity|
+|garage_area|int|train.csv, test.csv|Size of garage in square feet|
+|garage_qual|int|train.csv, test.csv|(Ordinal): Garage quality|
+|garage_cond|int|train.csv, test.csv|(Ordinal): Garage condition|
+|paved_drive|int|train.csv, test.csv|(Ordinal): Paved driveway|
+|wood_deck_sf|int|train.csv, test.csv|Wood deck area in square feet|
+|open_porch_sf|int|train.csv, test.csv|Open porch area in square feet|
+|enclosed_porch|int|train.csv, test.csv|Enclosed porch area in square feet|
+|3ssn_porch|int|train.csv, test.csv|Three season porch area in square feet|
+|screen_porch|int|train.csv, test.csv|Screen porch area in square feet|
+|pool_area|int|train.csv, test.csv|Pool area in square feet|
+|pool_qc|int|train.csv, test.csv|(Ordinal): Pool quality|
+|fence|int|train.csv, test.csv|(Ordinal): Fence quality|
+|misc_val|int|train.csv, test.csv|$Value of miscellaneous feature|
+|saleprice|int|train.csv|Sale price $$|
 
-**Preprocessing and Modeling**
-- Are categorical variables one-hot encoded?
-- Does the student investigate or manufacture features with linear relationships to the target?
-- Have the data been scaled appropriately?
-- Does the student properly split and/or sample the data for validation/training purposes?
-- Does the student utilize feature selection to remove noisy or multi-collinear features?
-- Does the student test and evaluate a variety of models to identify a production algorithm (**AT MINIMUM:** linear regression, lasso, and ridge)?
-- Does the student defend their choice of production model relevant to the data at hand and the problem?
-- Does the student explain how the model works and evaluate its performance successes/downfalls?
+#### One-Hot-Encoded Variables (prefix-)
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|ms_subclass|int|train.csv, test.csv|Identifies the type of dwelling involved in the sale.<br><br>020	1-STORY 1946 & NEWER ALL STYLES<br>030	1-STORY 1945 & OLDER<br>040	1-STORY W/FINISHED ATTIC ALL AGES<br>045	1-1/2 STORY - UNFINISHED ALL AGES<br>050	1-1/2 STORY FINISHED ALL AGES<br>060	2-STORY 1946 & NEWER<br>070	2-STORY 1945 & OLDER<br>075	2-1/2 STORY ALL AGES<br>080	SPLIT OR MULTI-LEVEL<br>085	SPLIT FOYER<br>090	DUPLEX - ALL STYLES AND AGES<br>120	1-STORY PUD (Planned Unit Development) - 1946 & NEWER<br>150	1-1/2 STORY PUD - ALL AGES<br>160	2-STORY PUD - 1946 & NEWER<br>180	PUD - MULTILEVEL - INCL SPLIT LEV/FOYER<br>190	2 FAMILY CONVERSION - ALL STYLES AND AGES|
+|ms_zoning|int|train.csv, test.csv|Identifies the general zoning classification of the sale.<br><br>A	Agriculture<br>C	Commercial<br>FV	Floating Village Residential<br>I	Industrial<br>RH	Residential High Density<br>RL	Residential Low Density<br>RP	Residential Low Density Park<br>RM	Residential Medium Density|
+|street|int|train.csv, test.csv|Type of road access to property<br><br>Grvl	Gravel<br>Pave	Paved|
+|lot_shape|int|train.csv, test.csv|(Ordinal): General shape of property<br><br>3	Regular<br>2	Slightly irregular<br>1	Moderately Irregular<br>0	Irregular|
+|land_contour|int|train.csv, test.csv|Flatness of the property<br><br>Lvl	Near Flat/Level<br>Bnk	Banked - Quick and significant rise from street grade to building<br>HLS	Hillside - Significant slope from side to side<br>Low	Depression|
+|neighborhood|int|train.csv, test.csv|Physical locations within Ames city limits|
+|bldg_type|int|train.csv, test.csv|Type of dwelling<br><br>1Fam	Single-family Detached<br>2FmCon	Two-family Conversion; originally built as one-family dwelling<br>Duplx	Duplex<br>TwnhsE	Townhouse End Unit<br>TwnhsI	Townhouse Inside Unit|
+|house_style|int|train.csv, test.csv|Style of dwelling<br><br>1Story	One story<br>5Fin	One and one-half story: 2nd level finished<br>5Unf	One and one-half story: 2nd level unfinished<br>2Story	Two story<br>2.5Fin	Two and one-half story: 2nd level finished<br>2.5Unf	Two and one-half story: 2nd level unfinished<br>SFoyer	Split Foyer<br>SLvl	Split Level|
+|roof_style|int|train.csv, test.csv|Type of roof<br><br>Flat	Flat<br>Gable	Gable<br>Gambrel	Gabrel (Barn)<br>Hip	Hip<br>Mansard	Mansard<br>Shed	Shed|
+|central_air|int|train.csv, test.csv|Central air conditioning|
+|garage_finish|int|train.csv, test.csv|Interior finish of the garage|
+|mo_sold|int|train.csv, test.csv|Month Sold (MM)|
+|yr_sold|int|train.csv, test.csv|Year Sold (YYYY)|
 
-**Evaluation and Conceptual Understanding**
-- Does the student accurately identify and explain the baseline score?
-- Does the student select and use metrics relevant to the problem objective?
-- Is more than one metric utilized in order to better assess performance?
-- Does the student interpret the results of their model for purposes of inference?
-- Is domain knowledge demonstrated when interpreting results?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
 
-**Conclusion and Recommendations**
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
-- Does the conclusion answer the original problem statement?
-- Does the student address how findings of this research can be applied for the benefit of stakeholders?
-- Are future steps to move the project forward identified?
+---
+## Primary Findings
 
-### Organization and Professionalism
+- Top (individual) factors correlated with saleprice appear to be: overall_qual, exter_qual, gr_liv_area, kitchen_qual, garage_area.<br><br>
+It stands to reason that for a person hoping to increase their home sale value, these would be the areas of focus.
 
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
+- Top higher-order (3rd degree polynomial) factors correlated with saleprice are listed in the table below
 
-**Visualizations**
-- Are sufficient visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Are plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
 
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Are `sklearn` methods used appropriately?
 
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
 
-In order to pass the project, students must earn a minimum score of 1 for each category.
-- Earning below a 1 in one or more of the above categories would result in a failing project.
-- While a minimum of 1 in each category is the required threshold for graduation, students should aim to earn at least an average of 1.5 across each category. An average score below 1.5, while it may be passing, means students may want to solicit specific feedback in order to significantly improve the project before showcasing it as part of a portfolio or the job search.
+### Most Influential features in higher order (3rd degree polynomial) model:
 
-### REMEMBER:
+#### Top most POSITIVELY influential features in final model
+||Feature Description|scaling power (non-dimensional)|
+|---|---|---|
+|1|(overall_qual exter) * (qual bsmt_qual)|5786.106282|
+|2|(overall_qual) * (full_bath kitchen_qual)|5328.531647|
+|3|(overall_qual)^2 * (garage_cars)|5243.503826|
+|4|(overall_qual)^2 * (garage_cars)|5243.503826|
+|5|(heating_qc) * (gr_liv_area functional)|3898.87032|
+|6|(overall_qual) * (garage_cars) * (garage_area)|3275.160347|
+|7|(overall_cond) * (gr_liv_area functional)|3265.027374|
+||||
 
-This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
+#### Top most NEGATIVELY influential features in final model
+||Feature Description|scaling power (non-dimensional)|
+|---|---|---|
+|-1|(mas_vnr_area) * (total_bsmt_sf) * (neighborhood_Edwards)|-5858.773851|
+|-2|(total_bsmt_sf) * (garage_area) * (neighborhood_Edwards)|-4979.10532|
+|-3|(mas_vnr_area) * (bsmtfin_sf_1) * (neighborhood_Edwards)|-3049.396129|
+|-4|(bsmtfin_sf_1) * (mo_sold_1) * (yr_sold_2009)|-1170.813491|
+|-5|(fireplaces) * (open_porch_sf) * (neighborhood_Edwards)|-899.948678|
+|-6|(lot_area) * (foundation_BrkTil) * (mo_sold_8)|-716.521048|
+|-7|(screen_porch) * (yr_sold_2010) * (garage_type_Detchd)|-709.927402|
+||||
+
+---
+## Comments/Instructions for Graders
+
+- All data processing, EDA, and modeling are contained in the same notebook: 'dw-final.ipynb'.  The input and contest files are processed differently by the code depending on whether the run_type variable at the top is set to a 1 or non-1 value.
+
+- Cleaned datasets as well as the original source data files utilized can be found in the './datasets' directory 
+
+- Model-generated output filescan be found in the './output' directory.  The './output/predictions_8_ridge.csv' output file is considered the final model.
+
+
+---
+## Sources & References
+
+1.[Kaggle](https://www.kaggle.com/)
+2.[data description & source for below Data Documentation](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).
+
