@@ -5,7 +5,10 @@
 ---
 ## Problem Statement
 
-asdfasfasdfasdfasf
+A wealthy Nigerian prince who contacted us online is interested in investing in homes in Ames, Iowa. For a small buy-in fee that I wired to him last week, I’ve joined his investment group and now am in charge of the project.
+
+The prince is interested in flipping the homes for profit and is hoping to better understand the factors at play in affecting home sale prices, so that he does not overpay for his investments and can determine fair market values for the properties he wishes to sell.
+
 
 ---
 ## Data Background
@@ -19,14 +22,7 @@ Reference: [data description & source for below Data Dictionary](http://jse.amst
 ---
 ## Data Dictionary
 
-|Feature|Type|Dataset|Description|
-|---|---|---|---|
-|rtype|object|ACT, SAT, CGR|Record Type: C=County\| D=District\| S=School\| X=State|
-|sname|object|ACT, SAT, CGR|School Name\| N/A = County or District Level Record|
-|dname|object|ACT, SAT, CGR|District Name\| N/A = County Level Record|
-|cname|object|ACT, SAT, CGR|County Name|
-
-#### Originating from the ACT dataset
+#### General Variables
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
 |id|int|train.csv, test.csv|identifier used |
@@ -152,6 +148,6 @@ It stands to reason that for a person hoping to increase their home sale value, 
 ---
 ## Sources & References
 
-1.[Kaggle](https://www.kaggle.com/)
-2.[data description & source for below Data Documentation](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).
+1. [Kaggle](https://www.kaggle.com/)
+1. [data description & source for below Data Documentation](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).
 
